@@ -1,0 +1,33 @@
+.chat-main
+  .main-header
+    .chat-group_name
+      .chat-group_name__logo
+        test
+      .chat-user_name
+        .chat-user_name__logo
+          Member : masa
+    .edit-box
+      .edit-box__logo
+        EDIT
+  .messages
+    .message-user
+      .massage-user__logo
+        masa 
+      .message-user_info
+        .message-user_info__logo
+          2019/11/20/(Wed) 17:43:01
+    .message-text
+      .messag-text__logo
+        おはよう!
+  .form
+    .message-zone
+      %input.message-zone__logo
+      .message-image
+        %label{class: "message-image__logo"}
+          = icon('fas', 'image')
+          %input{type: "file", class: 'none'}
+          -# <i class="far fa-image"></i>
+          -# <input class="input-box__image__file" type="file" name="message[image]" id="message_image"> 
+    .message-send
+      .message-send__logo
+        Send
