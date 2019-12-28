@@ -9,15 +9,74 @@
   .chat-side {
   width: 300px;
   background-color: #2f3e51;
+  
 
     .side-header {
-  background-color: #253141;
-  height: 100px;
+     background-color: #253141;
+     height: 100px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: white;
+    
+      .side-box{
+      height: 20px;
+      width: 260px;
+      background-color: #253141;
+      margin: 0 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      
+      .side-box_user_name{
+        height: 20px;
+        width: 60px;
+        font-size: 16px;
+        background-color: #253141;
+      }
+      .side-box_menu{
+        height: 20px;
+        width: 60px;
+        background-color:#253141;
+      }  
+      }  
     }
-
     .groups {
-  background-color: #2f3e51;
-  height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    color: white;
+
+      .groups-box1{
+      height: 20px;
+      width: 260px;
+      background-color:#2f3e51;
+      margin: 0 20px;
+      }
+      .groups-box2{
+      height: 15px;
+      width: 260px;
+      background-color: #2f3e51;
+      margin: 0 20px;
+      &__logo{
+        font-size: 15px;
+      }
+      }
+      .groups-box3{
+        height: 5px;
+        width: 260px;
+        background-color: #2f3e51;
+        margin: 0 20px;
+      }
+      .groups-box4{
+        height: 11px;
+        width: 260px;
+        background-color: #2f3e51;
+        margin: 0 20px;
+        &__logo{
+          font-size: 11px;
+        }
+      }
+      
     }
   }
 
@@ -29,16 +88,131 @@
   height: 100px;
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  
+    .chat-group_name{
+      height: 20px;
+      width: 100px;
+      background-color:#ffffff;
+      &__logo{
+      font-size: 20px;
+      color: #333333;
+      }
+      .chat-user_name{
+        height: 15px;
+        width: 100px;
+        background-color:#ffffff;
+        margin: 30px 0 ;
+        &__logo{
+        font-size: 15px;
+        color: #999999
+        }
+      }
+    } 
+  .edit-box{
+    height: 40px;
+    width: 72px;
+    background-color:#ffffff;
+    &__logo{
+      font-size: 16px;
+      color: #38aef0;
+      line-height: 40px;
+    }
   }
-
+  }
   .messages {
   background-color: #fafafa;
   height: calc(100vh - 190px);
+  padding: 46px 40px;
+    
+    .message-user{
+      background:#fafafa;
+      height: 20px;
+      width: 200px;
+      display: flex;
+      margin-bottom:10px;
+       &__logo{
+      color: #333333;
+      
+      justify-content: space-between;
+      }
+      .message-user_info{
+        height: 20px;
+        width: 200px;
+        font-size: 12px;
+        background-color: #fafafa;
+        &__logo{
+          color: #999999;
+          text-align: center;
+        }
+      }
+    }
+    .message-text{
+      background:#fafafa;
+      height: 61px;
+      width: 250px;
+      font-size: 14px;
+      &__logo{
+      color: #434A54;
+      }
+    }
   }
 
   .form {
   background-color: #d2d2d2;
   height: 90px;
+  padding: 20px 40px;
+  display: flex;
+  
+    
+    .message-zone{
+      background-color:#fafafa;
+      height: 55px;
+      width: 100%;
+      margin: 0 10px;
+      position: relative;
+      &__logo{
+        line-height: 55px;
+        width: 100%;
+
+      }
+
+      .message-image{
+        background:#fafafa;
+        height: 5px;
+        width: 5px;
+        position: absolute;
+        top: 5px;
+        right: 35px;
+        &__logo{
+        line-height: 55px;
+        font-size: 30px;
+        text-align: center;
+        .none{
+          display: none;
+        }
+        }
+      }
+
+    }
+    .message-send{
+      background-color: #38aef0;
+      height: 55px;
+      width: 120px;
+      margin: 0  20px;
+      font-size: 25px;
+      &__logo{
+        color: white;
+        text-align: center;
+        line-height: 60px;
+      }
+    }
   }
   }
 }
+
+
+
+
