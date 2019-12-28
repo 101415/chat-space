@@ -8,21 +8,20 @@
 
   .chat-side {
   width: 300px;
-  background-color: #2f3e51;
+  background-color: $navyblue;
   
 
     .side-header {
-     background-color: #253141;
+     background-color: $navyblack;
      height: 100px;
      display: flex;
      justify-content: space-between;
      align-items: center;
-     color: white;
+     color: $white;
     
       .side-box{
       height: 20px;
       width: 260px;
-      background-color: #253141;
       margin: 0 20px;
       font-weight: bold;
       display: flex;
@@ -32,31 +31,26 @@
         height: 20px;
         width: 60px;
         font-size: 16px;
-        background-color: #253141;
       }
       .side-box_menu{
         height: 20px;
         width: 60px;
-        background-color:#253141;
       }  
       }  
     }
     .groups {
-    background-color: #2f3e51;
     height: calc(100vh - 100px);
-    color: white;
-
+    color: $white;
       .groups-box1{
       height: 20px;
       width: 260px;
-      background-color:#2f3e51;
       margin: 0 20px;
       }
       .groups-box2{
       height: 15px;
       width: 260px;
-      background-color: #2f3e51;
       margin: 0 20px;
+      
       &__logo{
         font-size: 15px;
       }
@@ -64,13 +58,11 @@
       .groups-box3{
         height: 5px;
         width: 260px;
-        background-color: #2f3e51;
         margin: 0 20px;
       }
       .groups-box4{
         height: 11px;
         width: 260px;
-        background-color: #2f3e51;
         margin: 0 20px;
         &__logo{
           font-size: 11px;
@@ -82,11 +74,10 @@
 
   .chat-main {
   width: calc(100% - 300px);
-  background-color: #ffffff;
+  background-color: $white;
 
   .main-header {
   height: 100px;
-  background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
   display: flex;
   justify-content: space-between;
@@ -95,7 +86,6 @@
     .chat-group_name{
       height: 20px;
       width: 100px;
-      background-color:#ffffff;
       &__logo{
       font-size: 20px;
       color: #333333;
@@ -103,7 +93,6 @@
       .chat-user_name{
         height: 15px;
         width: 100px;
-        background-color:#ffffff;
         margin: 30px 0 ;
         &__logo{
         font-size: 15px;
@@ -114,21 +103,20 @@
   .edit-box{
     height: 40px;
     width: 72px;
-    background-color:#ffffff;
     &__logo{
       font-size: 16px;
       color: #38aef0;
       line-height: 40px;
+      text-align: center;
     }
   }
   }
   .messages {
-  background-color: #fafafa;
+  background-color: $darkwhite;
   height: calc(100vh - 190px);
   padding: 46px 40px;
     
     .message-user{
-      background:#fafafa;
       height: 20px;
       width: 200px;
       display: flex;
@@ -142,7 +130,6 @@
         height: 20px;
         width: 200px;
         font-size: 12px;
-        background-color: #fafafa;
         &__logo{
           color: #999999;
           text-align: center;
@@ -150,7 +137,6 @@
       }
     }
     .message-text{
-      background:#fafafa;
       height: 61px;
       width: 250px;
       font-size: 14px;
@@ -168,7 +154,7 @@
   
     
     .message-zone{
-      background-color:#fafafa;
+      background-color: $darkwhite;
       height: 55px;
       width: 100%;
       margin: 0 10px;
@@ -180,7 +166,6 @@
       }
 
       .message-image{
-        background:#fafafa;
         height: 5px;
         width: 5px;
         position: absolute;
