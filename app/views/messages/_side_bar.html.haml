@@ -2,11 +2,13 @@
   .side-header
     .side-box
       .side-box__logo
-        masa
+        = current_user.name
       .side-box_menu
-      .side-box_menu__logo
-        <i class="far fa-edit"></i>
-        <i class="fas fa-cog"></i>
+        .side-box_menu__logo
+          = link_to do
+            = icon('fas', 'pen-square', class: 'icon')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
   .groups
     .groups-box1
     .groups-box2
