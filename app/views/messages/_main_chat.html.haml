@@ -10,15 +10,16 @@
       .edit-box__logo
         EDIT
   .messages
+    = render @messages
     .message-user
       .massage-user__logo
-        masa 
+        masa
       .message-user_info
         .message-user_info__logo
-          2019/11/20/(Wed) 17:43:01
+          2019
       .message-text
         .messag-text__logo
-          おはよう!
+          おはよう
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'message-zone__logo', placeholder: 'type a message'
