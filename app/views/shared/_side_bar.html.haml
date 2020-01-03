@@ -5,19 +5,18 @@
         = current_user.name
       .side-box_menu
         .side-box_menu__logo
-          = link_to do
+          = link_to new_group_path do
             = icon('fas', 'pen-square', class: 'icon')
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .groups
-    .groups-box1
-    .groups-box2
-      .groups-box2__logo
-        techcamp
-    .groups-box3
-    .groups-box4
-      .groups-box4__logo
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
 
 
 
