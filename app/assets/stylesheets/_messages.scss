@@ -44,35 +44,22 @@
     }
     .groups {
     height: calc(100vh - 100px);
-    color: $white;
-      .groups-box1{
-      height: 20px;
-      width: 260px;
-      margin: 0 20px;
+    padding:20px 20px 0;
+    a, a:hover, a:visited{
+      color:white;
+      text-decoration: none;
+    }
+      .group{
+      margin-bottom: 40px;
+      font-size: 13px;
       }
-      .groups-box2{
-      height: 15px;
-      width: 260px;
-      margin: 0 20px;
-      
-      &__logo{
-        font-size: 15px;
+      .group-name{
+      margin-bottom: 5px;
+      font-size: 12px;
       }
+      .group-message{
+        font-size: 11px;
       }
-      .groups-box3{
-        height: 5px;
-        width: 260px;
-        margin: 0 20px;
-      }
-      .groups-box4{
-        height: 11px;
-        width: 260px;
-        margin: 0 20px;
-        &__logo{
-          font-size: 11px;
-        }
-      }
-      
     }
   }
 
