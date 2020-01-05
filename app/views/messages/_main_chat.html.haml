@@ -1,26 +1,30 @@
 .chat-main
   .main-header
-    //= group.user.each do |user|
     .chat-group_name
       .chat-group_name__logo
-        test
+        = @group.name
       .chat-user_name
         .chat-user_name__logo
-          Member : masa
+          Menber:
+          - @group.users.each do |user|
+            .user
+              = user.name
+          
     .edit-box
       .edit-box__logo
-        EDIT
+        = link_to "Edit",edit_group_path(@group),class: "EDITlink"
+
   .messages
     = render @messages
     .message-user
       .massage-user__logo
-        masa
+        
       .message-user_info
         .message-user_info__logo
-          2019
+          
       .message-text
         .messag-text__logo
-          おはよう
+          
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'message-zone__logo', placeholder: 'type a message'
