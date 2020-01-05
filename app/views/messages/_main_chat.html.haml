@@ -2,32 +2,34 @@
   .main-header
     .chat-group_name
       .chat-group_name__logo
-        test
+        = @group.name
       .chat-user_name
         .chat-user_name__logo
-          Member : masa
+          Menber:
+          - @group.users.each do |user|
+            .user
+              = user.name
+          
     .edit-box
       .edit-box__logo
-        EDIT
+        = link_to "Edit",edit_group_path(@group),class: "EDITlink"
+
   .messages
+    = render @messages
     .message-user
       .massage-user__logo
-        masa 
+        
       .message-user_info
         .message-user_info__logo
-          2019/11/20/(Wed) 17:43:01
-    .message-text
-      .messag-text__logo
-        おはよう!
+          
+      .message-text
+        .messag-text__logo
+          
   .form
-    .message-zone
-      %input.message-zone__logo
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'message-zone__logo', placeholder: 'type a message'
       .message-image
-        %label{class: "message-image__logo"}
-          = icon('fas', 'image')
-          %input{type: "file", class: 'none'}
-          -# <i class="far fa-image"></i>
-          -# <input class="input-box__image__file" type="file" name="message[image]" id="message_image"> 
-    .message-send
-      .message-send__logo
-        Send
+        = f.label :image, class: 'message-image' do
+          = icon('fas', 'image', class: 'message-image')
+          = f.file_field :image, class: 'message-image__logo'
+      = f.submit 'Send', class:'message-send__logo'
