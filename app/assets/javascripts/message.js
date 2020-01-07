@@ -1,38 +1,39 @@
 $(function(){ 
   function buildHTML(message){
-   if ( message.image ) {
+    console.log(message)
+   if ( message.image_tag ) {
      var html =
       `<div class="message" data-message-id=${message.id}>
-         <div class="upper-message">
-           <div class="upper-message__user-name">
-             ${message-user__logo}
+         <div class="message-user">
+           <div class="message-user__logo">
+             ${message.user_name}
            </div>
-           <div class="upper-message__date">
-             ${message-user_info__logo}
+           <div class="message-user_info">
+             ${message.created_at}
            </div>
          </div>
-         <div class="lower-message">
-           <p class="lower-message__content">
-             ${message-text__logo}
+         <div class="message-text">
+           <p class="message-text__logo">
+             ${message.content}
            </p>
          </div>
-         <img src=${message.image} >
+         <img src=${message.image_tag} >
        </div>`
      return html;
    } else {
      var html =
       `<div class="message" data-message-id=${message.id}>
-         <div class="upper-message">
-           <div class="upper-message__user-name">
-             ${message-user__logo}
+         <div class="message-user">
+           <div class="message-user__logo">
+             ${message.user_name}
            </div>
-           <div class="upper-message__date">
-             ${message-user_info__logo}
+           <div class="message-user_info">
+             ${message.created_at}
            </div>
          </div>
-         <div class="lower-message">
-           <p class="lower-message__content">
-             ${message-text__logo}
+         <div class="message-text">
+           <p class="message-text__logo">
+             ${message.content}
            </p>
          </div>
        </div>`
@@ -51,12 +52,18 @@ $('#new_message').on('submit', function(e){
    processData: false,
    contentType: false
  })
+
   .done(function(data){
+    console.log(data)
     var html = buildHTML(data);
     $('.messages').append(html);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     $('form')[0].reset();
   })
-
-})
+  .fail(function(){
+    alert('error');
+  });
+  return false;
 });
+});
+
