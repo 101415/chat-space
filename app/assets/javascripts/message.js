@@ -1,6 +1,5 @@
 $(function(){ 
   function buildHTML(message){
-    console.log(message)
    if ( message.image_tag ) {
      var html =
       `<div class="message" data-message-id=${message.id}>
@@ -54,7 +53,6 @@ $('#new_message').on('submit', function(e){
  })
 
   .done(function(data){
-    console.log(data)
     var html = buildHTML(data);
     $('.messages').append(html);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
