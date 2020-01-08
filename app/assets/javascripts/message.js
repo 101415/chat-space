@@ -56,7 +56,6 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    console.log(formData);
     $.ajax({
       url: url,
       type: "POST",
@@ -67,7 +66,6 @@ $(function(){
     })
 
     .done(function(data){
-      console.log(data);
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
@@ -99,7 +97,7 @@ var reloadMessages = function() {
     }
   })
   .fail(function() {
-    console.log('error');
+    alert('error');
   });
 };
 if (document.location.href.match(/\/groups\/\d+\/messages/)) {
