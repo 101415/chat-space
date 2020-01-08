@@ -46,7 +46,7 @@ $(function(){
                       </div>
                       </div>
                       <div class="message-text">
-                        <img src="message.image_tag" class="message-text__logo" >
+                        <img src="${message.image_tag}" class="message-text__logo" >
                       </div>
                      </div>`
     };
