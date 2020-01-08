@@ -76,24 +76,26 @@
   padding: 30px;
   
     .chat-group_name{
-      height: 20px;
-      width: 300px;
       &__logo{
-      font-size: 20px;
-      color: #333333;
-      }
+        font-size: 20px;
+        color: #333333;
+        }
 
       .chat-user_name{
-        height: 15px;
-        width: 50px;
-        margin: 25px 0 ;
+        margin: 20px 0 ;
         &__logo{
-        display: flex;
-        font-size: 15px;
-        color: #999999
+          display: flex;
+          font-size: 14px;
+          color: #999999
         }
       }
     } 
+    .user{
+      width: 60px;
+      text-align: center;
+      margin: 0 3px;
+      
+    }
   .edit-box{
     height: 40px;
     width: 72px;
